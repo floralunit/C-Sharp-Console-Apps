@@ -34,7 +34,10 @@ public class DichotomousSearch
             Console.WriteLine($"Искомый элемент {value} находится на позиции {index + 1}");
         }
     }
+     
+    // 4 + p*3 + (1-p)*((n+1)*(4) + n*(3 + 3 + 1/c * 1 + 1 + p*1 +  (1-p1-p2)*1)
 
+    // 4 + p*3 + (1-p)*((n+1)*(4) + n*(3 + 3 + 1/c * 1) + (n - 1)(1 + p1*1 +  (1-p1-1/c)*1) + 1)
     static int BinarySearch(int[] array, int value)
     {
         int left = 0;

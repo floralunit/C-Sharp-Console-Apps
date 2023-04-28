@@ -2,6 +2,9 @@
 
 public class InterpolatingSearch
 {
+    // 1 + 1 + 2 + (n + 1) * (2 + 1 + 1 + 2 + 1) + n * (1 + 1 + 1 + 2 + 1 + 1 + 1 + 2 + 1 + 2 + 3 + p1*2 + 3 + p2*2 + (1 - p1 -p2) * (1)) + 3 + p * (1) + 3 + p*1)
+
+    // 7(n + 1) + n(13 + 3 + p1 * 2 + p2 * 2 + (1 - p1 - p2) * 1)
     static int InterpolationSearch(int[] array, int value)
     {
         int num = -1;
@@ -71,6 +74,7 @@ public class InterpolatingSearch
         }
     }
 
+    //1 + 3n * n(1 +4n +n (6+p*(3+6+4))
     static void BubbleSort(ref int[] A)
     {
         for (int i = 0; i < A.Length; i++)

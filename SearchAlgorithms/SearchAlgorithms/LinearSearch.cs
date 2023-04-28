@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 public class LinearSearch
 {
+    
+    // 1 + 4n + n(3 + 1/n * 4)
     public static void Run()
     {
         Console.Write("Введите слова через пробел: ");
