@@ -50,7 +50,7 @@ while (exit != 1)
 }
 Console.ReadLine();
 
-//1 + 5n + n(1 + 5n + n(6 + p1 * (3 + 6 + 4)))
+//1 + 5n + n(1 + 5(n/2) + (n/2)(6 + p1 * (3 + 6 + 4)))
 static int[] BubbleSort(int[] mas)
 {
     int temp;
@@ -64,13 +64,12 @@ static int[] BubbleSort(int[] mas)
                 mas[i] = mas[i + 1];
                 mas[i + 1] = temp;
             }
-            Console.WriteLine($"k = {k} i = {i}");
         }
     }
     return mas;
 }
 
-//(n+1) + n(1 + 1 + 5n + n(6 + p1 * (3 + 6 + 4 + 1) + 2))
+//(n+1) + n(1 + 1 + 5k + k(6 + p1 * (3 + 6 + 4 + 1) + 2))
 static int[] FastBubbleSort(int[] mas)
 {
     int temp;
@@ -88,13 +87,14 @@ static int[] FastBubbleSort(int[] mas)
                 mas[i + 1] = temp;
                 isMoved = true;
             }
-            Console.WriteLine($"k = {k} i = {i}");
+
         }
         k++;
     }
     return mas;
 }
 
+//1 + 4n + n(1 + 2 + 4(n-1) + (n-1)(5 + p1 * (1)) + 1 + p2 * (3 + 5 + 3))
 static int[] ChoiseSort(int[] mas)
 {
     for (int k = 0; k < mas.Length; k++)
@@ -113,11 +113,12 @@ static int[] ChoiseSort(int[] mas)
             mas[j] = mas[k];
             mas[k] = temp;
         }
+        
     }
     return mas;
 }
 
-//(n+1) + n(1 + 1 + 5n + n(6 + p1 * (3 + 6 + 4 + 1) + 2))
+//2 + (n+1) + n(1 + 4n + n(1 + 8 * (n+1) + n*(3 + 6 + 4 + 2)) + 2)
 static int[] ShellSort(int[] mas)
 {
     var d = mas.Length / 2;
