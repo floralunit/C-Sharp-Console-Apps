@@ -23,14 +23,22 @@ namespace BinaryTrees
 
         public TreeNode Find(int data)
         {
+            //if the root is not null then we call the find method on the root
             if (root != null)
             {
+                // call node method Find
                 return root.Find(data);
             }
             else
-            {
+            {//the root is null so we return null, nothing to find
+                Console.WriteLine("root not found");
                 return null;
             }
+        }
+        public void PreorderTraversal()
+        {
+            if (root != null)
+                root.PreOrderTraversal();
         }
 
     }

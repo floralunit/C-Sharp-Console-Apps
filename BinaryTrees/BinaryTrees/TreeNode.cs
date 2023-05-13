@@ -41,9 +41,9 @@ namespace BinaryTrees
                 }
             }
         }
-
         public TreeNode Find(int value)
         {
+
             TreeNode currentNode = this;
 
             while (currentNode != null)
@@ -61,8 +61,19 @@ namespace BinaryTrees
                     currentNode = currentNode.left;
                 }
             }
- 
+
             return null;
+        }
+
+        public void PreOrderTraversal()
+        {
+            Console.Write(key + " ");
+
+            if (left != null)
+                left.PreOrderTraversal();
+
+            if (right != null)
+                right.PreOrderTraversal();
         }
 
     }

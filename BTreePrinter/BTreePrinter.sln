@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BTreePrinter", "BTreePrinter\BTreePrinter.csproj", "{37F02E5A-D0E9-4A62-B3BC-B6EF19BDFFCB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37F02E5A-D0E9-4A62-B3BC-B6EF19BDFFCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37F02E5A-D0E9-4A62-B3BC-B6EF19BDFFCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37F02E5A-D0E9-4A62-B3BC-B6EF19BDFFCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37F02E5A-D0E9-4A62-B3BC-B6EF19BDFFCB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BAB79D26-42D2-4B30-9895-894D55973D25}
+	EndGlobalSection
+EndGlobal

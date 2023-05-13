@@ -43,6 +43,7 @@ namespace BinaryTreeExample
             }
             else
             {//the root is null so we return null, nothing to find
+                Console.WriteLine("root not found");
                 return null;
             }
         }

@@ -80,11 +80,7 @@ void BPTree::insert(int x) {
     }
     else {
         Node* cursor = root;
-        Node* parent;
-        parent = new Node;
-        parent->key[0] = x;
-        parent->IS_LEAF = true;
-        parent->size = 1;
+        Node* parent = nullptr;
         while (cursor->IS_LEAF == false) {
             parent = cursor;
             for (int i = 0; i < cursor->size; i++) {
@@ -214,11 +210,7 @@ void BPTree::insertInternal(int x, Node* cursor, Node* child) {
 
 // Find the parent
 Node* BPTree::findParent(Node* cursor, Node* child) {
-    Node* parent;
-    parent = new Node;
-    parent->key[0] = 0;
-    parent->IS_LEAF = true;
-    parent->size = 1;
+    Node* parent = nullptr;
     if (cursor->IS_LEAF || (cursor->ptr[0])->IS_LEAF) {
         return NULL;
     }
@@ -257,8 +249,10 @@ Node* BPTree::getRoot() {
 }
 
 int main() {
+    setlocale(LC_ALL, "Russian");
+
     BPTree node;
-    srand(time(0));
+    srand(time(NULL));
     int x = 0;
 
     for (int i = 1; i <= 12; i++) {
@@ -266,8 +260,12 @@ int main() {
         cout << x << " ";
         node.insert(x);
     }
+    cout << endl;
+    node.display(node.getRoot());
 
-    //node.display(node.getRoot());
+    int pipa;
+    cout << "Введите число, которое нужно найти: ";
+    cin >> pipa;
 
-    node.search(15);
+    node.search(pipa);
 }
