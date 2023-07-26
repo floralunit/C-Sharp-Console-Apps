@@ -253,6 +253,7 @@ namespace BinaryPlusTree
         }
 
         // Print the tree
+        //1 + p1 * (1 + 4n + n * (4) + 1 + 2 + p2 * (1 + 5n + n * (1 + 4)))
         public void Display(Node treeRoot)
         {
             if (treeRoot != null)

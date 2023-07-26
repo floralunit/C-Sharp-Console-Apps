@@ -41,6 +41,8 @@ namespace BinaryTrees
                 }
             }
         }
+
+        // 1 * (n + 1) + n * (2 + (p1) * 1 + (1 - p1) * (2 + p2 * 2 + (1 - p2) * 2))
         public TreeNode Find(int value)
         {
 
@@ -48,6 +50,7 @@ namespace BinaryTrees
 
             while (currentNode != null)
             {
+               //Console.WriteLine($"node = {currentNode.key} value = {value}");
                 if (value == currentNode.key)
                 {
                     return currentNode;
